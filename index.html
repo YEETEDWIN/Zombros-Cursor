@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Zombros Cursor!</title>
+  <link rel="icon" href="img/icon.png">
+
+	<meta name="author" content="Y^^TEDWIN">
+	<meta name="description" content="Zombie invasion. Run.">
+	<meta name="keywords" content="zombie,invasion,brains,game">
+	
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="zombie.css" type="text/css">
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+		crossorigin="anonymous"></script>
+	<script src="uuid.js" type="text/javascript"></script>
+	<script src="util.js" type="text/javascript"></script>
+	<script src="zombie.js" type="text/javascript"></script>
+	<script src="thing.js" type="text/javascript"></script>
+	<script src="vars.js" type="text/javascript"></script>
+	<script src="game.js" type="text/javascript"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41053560-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-41053560-1');
+	</script>
+	<script data-ad-client="ca-pub-1228972483115612" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+<div id="world" style="display: none">
+	<div id="header">
+		<div id="title">Zombie invasion - <span style="font-size: 0.8em;">Run.</span></div>
+	</div>
+	<div id="board">
+		<div id="overlay">
+			<div id="overlayShare" style="display:none; padding-top:10px; padding-left: 10px;">
+				<!-- AddToAny BEGIN -->
+				<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+					<span style="float: left">&nbsp;Share your score&nbsp;&nbsp;</span>
+					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+					<a class="a2a_button_facebook"></a>
+					<a class="a2a_button_twitter"></a>
+					<a class="a2a_button_google_plus"></a>
+				</div>
+				<!-- AddToAny END -->
+			</div>
+			<div id="overlayText"></div>
+		</div>
+		<div id="alert">
+			<span id="alertText"></span>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="tips"></div>
+		<div id="score">Score:&nbsp;<span id="scoreValue"></span></div>
+	</div>
+</div>
+
+<div id="debug">
+</div>
+
+<script>
+
+function addtoany_onshare_callback(data) {
+	return {
+		title: "I escaped the zombie horde for " + score.toString() + " seconds. Can you beat my score?",
+		url: "http://zombie.ninja.org.za"
+	};
+}
+
+var a2a_config = a2a_config || {};
+a2a_config.callbacks = a2a_config.callbacks || [];
+a2a_config.callbacks.push({
+    share: addtoany_onshare_callback
+});
+</script>		
+
+<script async src="//static.addtoany.com/menu/page.js"></script>
+
+</body>
+</html>
